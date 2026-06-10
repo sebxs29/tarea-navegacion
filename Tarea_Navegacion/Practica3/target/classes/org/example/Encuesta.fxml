@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" spacing="15.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.EncuestaController">
+   <children>
+      <Label style="-fx-font-size: 22; -fx-font-weight: bold;" text="ENCUESTA DE GULTURA GENERAL" />
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label style="-fx-font-size: 14; -fx-font-weight: bold;" text="Pregunta 1: Capital de Ecuador" />
+            <RadioButton fx:id="rbP1A" mnemonicParsing="false" text="Quito">
+               <toggleGroup>
+                  <ToggleGroup fx:id="grupo1" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbP1B" mnemonicParsing="false" text="Guayaquil" toggleGroup="$grupo1" />
+            <RadioButton fx:id="rbP1C" mnemonicParsing="false" text="Cuenca" toggleGroup="$grupo1" />
+         </children>
+      </VBox>
+      <Separator prefWidth="200.0" />
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label style="-fx-font-size: 14; -fx-font-weight: bold;" text="Pregunta 2: 2 + 2 = ?" />
+            <RadioButton fx:id="rbP2A" mnemonicParsing="false" text="3">
+               <toggleGroup>
+                  <ToggleGroup fx:id="grupo2" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbP2B" mnemonicParsing="false" text="4" toggleGroup="$grupo2" />
+            <RadioButton fx:id="rbP2C" mnemonicParsing="false" text="5" toggleGroup="$grupo2" />
+         </children>
+      </VBox>
+      <Separator prefWidth="200.0" />
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label style="-fx-font-size: 14; -fx-font-weight: bold;" text="Pregunta 3: Lenguaje de JavaFX " />
+            <RadioButton fx:id="rbP3A" mnemonicParsing="false" text="Python">
+               <toggleGroup>
+                  <ToggleGroup fx:id="grupo3" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbP3B" mnemonicParsing="false" text="Java" toggleGroup="$grupo3" />
+            <RadioButton fx:id="rbP3C" mnemonicParsing="false" text="C++" toggleGroup="$grupo3" />
+         </children>
+      </VBox>
+      <Separator prefWidth="200.0" />
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label style="-fx-font-size: 14; -fx-font-weight: bold;" text="Pregunta 4: Color del cielo" />
+            <RadioButton fx:id="rbP4A" mnemonicParsing="false" text="Verde">
+               <toggleGroup>
+                  <ToggleGroup fx:id="grupo4" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbP4B" mnemonicParsing="false" text="Azul" toggleGroup="$grupo4" />
+            <RadioButton fx:id="rbP4C" mnemonicParsing="false" text="Rojo" toggleGroup="$grupo4" />
+         </children>
+      </VBox>
+      <Button fx:id="btnCalcular" mnemonicParsing="false" onAction="#calcularResultado" text="Calcular Resultado" />
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label fx:id="lblPuntaje" text="Puntaje: 0" />
+            <Label fx:id="lblCorrectas" text="Correctas: 0" />
+            <Label fx:id="lblIncorrectas" text="Incorrectas: 0" />
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
